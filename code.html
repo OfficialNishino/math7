@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Question 7</h1>
+
+    <p>Which shape is ALWAYS a parallelogram?</p>
+
+    <button onclick="answer('A')">A. Trapezoid</button>
+    <button onclick="answer('B')">B. Rectangle</button>
+    <button onclick="answer('C')">C. Kite</button>
+    <button onclick="answer('D')">D. Triangle</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+function answer(choice) {
+
+    let result = document.getElementById("result");
+
+    if (choice === "A") {
+        result.innerHTML = "Not in general! A trapezoid does not necessarily have two pairs of parallel sides.";
+    }
+    else if (choice === "B") {
+        result.innerHTML = "Correct! Every rectangle is a parallelogram.";
+    }
+    else if (choice === "C") {
+        result.innerHTML = "Not necessarily! A kite does not generally have two pairs of parallel sides.";
+    }
+    else {
+        result.innerHTML = "Nope! A triangle has only three sides.";
+    }
+}
+</script>
+
+</body>
+</html>
